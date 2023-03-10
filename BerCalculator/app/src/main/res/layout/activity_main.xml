@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="com.erbaris.android.app.calculator.viewmodel.MainActivityViewModel"/>
+        <variable name="viewModel" type="MainActivityViewModel" />
+        <variable name="screenView" type="java.lang.String" />
+    </data>
+
+
+    <LinearLayout
+
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+
+
+        <TextView
+            android:id="@+id/mainActivityTextViewCalculator"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="@{screenView}"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:onClick="@{() -> viewModel.handleCbuttonClicked()}"
+                android:text="@string/button_C_text" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:onClick="@{() -> viewModel.handlepercantageButtonClicked()}"
+                android:text="@string/button_percentage_text" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:onClick="@{() -> viewModel.handleCEButtonClicked()}"
+                android:text="@string/button_CE_text" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:onClick="@{() -> viewModel.handleDivideButtonClicked()}"
+                android:text="@string/button_divide_text" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:onClick="@{() -> viewModel.handleSevenButtonClicked()}"
+                android:text="@string/button_7_text" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:onClick="@{() -> viewModel.handleEigthButtonClicked()}"
+                android:text="@string/button_8_text" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:onClick="@{() -> viewModel.handleNineButtonClicked()}"
+                android:text="@string/button_9_text" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:onClick="@{() -> viewModel.handleMultiplyButtonClicked()}"
+                android:text="@string/button_multiply_text" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:onClick="@{() -> viewModel.handleFourButtonClicked()}"
+                android:text="@string/button_4_text" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:onClick="@{() -> viewModel.handleFiveButtonClicked()}"
+                android:text="@string/button_5_text" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:onClick="@{() -> viewModel.handleSixButtonClicked()}"
+                android:text="@string/button_6_text" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:onClick="@{() -> viewModel.handlePlusButtonClicked()}"
+                android:text="@string/button_plus_text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:onClick="@{() -> viewModel.handleOneButtonClicked()}"
+                android:text="@string/button_1_text" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:onClick="@{() -> viewModel.handleTwoButtonClicked()}"
+                android:text="@string/button_2_text" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:onClick="@{() -> viewModel.handleThreeButtonClicked()}"
+                android:text="@string/button_3_text" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:onClick="@{() -> viewModel.handleMinusButtonClicked()}"
+                android:text="@string/button_minus_text" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:onClick="@{() -> viewModel.handleDotButtonClicked()}"
+                android:text="@string/button_dot_text" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:onClick="@{() -> viewModel.handleZeroButtonClicked()}"
+                android:text="@string/button_0_text" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:onClick="@{() -> viewModel.handleSignButtonClicked()}"
+                android:text="@string/button_sign_text" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:onClick="@{() -> viewModel.handleEqualButtonClicked()}"
+                android:text="@string/button_equal_text" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</layout>
+
